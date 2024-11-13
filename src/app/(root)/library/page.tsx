@@ -41,7 +41,7 @@ export default function LibraryModule() {
           icon={<CalendarArrowUp />}
           info="9"
           desc="orders in queue"
-          href="#"
+          href="/library/pending-requests"
         />
         <InfoCard
           title="Library Budget"

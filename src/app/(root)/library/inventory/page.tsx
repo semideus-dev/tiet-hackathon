@@ -13,6 +13,7 @@ import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { ScrollArea } from "@/components/ui/scroll-area";
 import { Input } from "@/components/ui/input";
 import { useState } from "react";
+import { Search } from "lucide-react";
 
 const books = [
   { id: 1, title: "To Kill a Mockingbird", author: "Harper Lee" },
@@ -67,12 +68,19 @@ export default function LibraryInvertoryPage() {
           </BreadcrumbList>
         </Breadcrumb>
       </div>
-      <Input
-        type="search"
-        placeholder="Search books by title or author..."
-        value={searchTerm}
-        onChange={(e) => setSearchTerm(e.target.value)}
-      />
+      <div className="relative">
+        <Search
+          className="absolute left-3 top-1/2 -translate-y-1/2 transform text-muted-foreground"
+          size={20}
+        />
+        <Input
+          type="search"
+          placeholder="Search books by title or author..."
+          className="pl-10 text-muted-foreground"
+          value={searchTerm}
+          onChange={(e) => setSearchTerm(e.target.value)}
+        />
+      </div>
       <ScrollArea className="h-[calc(100vh-200px)]">
         <div className="grid grid-cols-1 gap-4 md:grid-cols-2 lg:grid-cols-3">
           {filteredBooks.map((book) => (
