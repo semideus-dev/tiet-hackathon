@@ -44,10 +44,10 @@ interface SidebarItemProps {
 }
 
 // Create SidebarContext with default value
-const SidebarContext = createContext<SidebarContextType>({ expanded: false });
+const SidebarContext = createContext<SidebarContextType>({ expanded: true });
 
 export default function Sidebar({ children }: SidebarProps) {
-  const [expanded, setExpanded] = useState(true);
+  const [expanded, setExpanded] = useState(false);
 
   return (
     <aside className="h-screen">
@@ -69,23 +69,6 @@ export default function Sidebar({ children }: SidebarProps) {
         <SidebarContext.Provider value={{ expanded }}>
           <ul className="mt-4 flex-1 space-y-8 px-3">{children}</ul>
         </SidebarContext.Provider>
-
-        <div className="flex border-t p-3">
-          <img
-            src="https://ui-avatars.com/api/?background=c7d2fe&color=3730a3&bold=true"
-            alt="User Avatar"
-            className="h-10 w-10 rounded-md"
-          />
-          <div
-            className={`flex items-center justify-between overflow-hidden transition-all ${expanded ? "ml-3 w-52" : "w-0"}`}
-          >
-            <div className="leading-4">
-              <h4 className="font-semibold">John Doe</h4>
-              <span className="text-xs text-gray-600">johndoe@gmail.com</span>
-            </div>
-            <MoreVertical size={20} />
-          </div>
-        </div>
       </nav>
     </aside>
   );
