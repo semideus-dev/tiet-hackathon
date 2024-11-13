@@ -12,19 +12,28 @@ export default function WeatherModule() {
           icon={<Thermometer />}
           info="28°C / 82.4°F"
           desc="Moderate"
+          href="#"
         />
-        <InfoCard title="Air Quality" icon={<Wind />} info="321" desc="Poor" />
+        <InfoCard
+          title="Air Quality"
+          icon={<Wind />}
+          info="321"
+          desc="Poor"
+          href="#"
+        />
         <InfoCard
           title="Humidity"
           icon={<Droplets />}
           info="60%"
           desc="chance of rain"
+          href="#"
         />
         <InfoCard
           title="UV Index"
           icon={<Sun />}
           info="4"
           desc="Moderately High"
+          href="#"
         />
       </div>
     </div>

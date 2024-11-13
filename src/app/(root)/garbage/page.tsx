@@ -14,18 +14,21 @@ export default function GarbageModule() {
           icon={<Trash2 />}
           info="250"
           desc="kilograms of waste collected"
+          href="#"
         />
         <InfoCard
           title="Overflow Alerts"
           icon={<SprayCan />}
           info="4/58"
           desc="bins are full"
+          href="#"
         />
         <InfoCard
           title="Bin Status"
           icon={<Hammer />}
           info="11/58"
           desc="bins require maintainance"
+          href="#"
         />
       </div>
       <ReportComponent />

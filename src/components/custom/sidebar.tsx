@@ -44,7 +44,7 @@ interface SidebarItemProps {
 }
 
 // Create SidebarContext with default value
-const SidebarContext = createContext<SidebarContextType>({ expanded: true });
+const SidebarContext = createContext<SidebarContextType>({ expanded: false });
 
 export default function Sidebar({ children }: SidebarProps) {
   const [expanded, setExpanded] = useState(true);

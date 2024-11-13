@@ -48,7 +48,7 @@ export default function AppLayout({ children }: { children: React.ReactNode }) {
         />
       </Sidebar>
 
-      <main className="m-4 flex-1 overflow-auto">{children}</main>
+      <main className="flex-1 overflow-auto p-4">{children}</main>
       <div className="absolute right-0 md:hidden">
         <MobileSidebar>
           <SidebarItem

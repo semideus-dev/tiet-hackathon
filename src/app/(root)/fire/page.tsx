@@ -12,18 +12,21 @@ export default function FireModule() {
           icon={<Flame />}
           info="72"
           desc="fire alarms active"
+          href="#"
         />
         <InfoCard
           title="Hazards"
           icon={<Biohazard />}
           info="0"
           desc="detected in campus"
+          href="#"
         />
         <InfoCard
           title="Past Reports"
           icon={<CircleAlert />}
           info="2"
           desc="reports this month"
+          href="#"
         />
       </div>
     </div>
