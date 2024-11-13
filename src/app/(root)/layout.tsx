@@ -45,7 +45,7 @@ export default function AppLayout({ children }: { children: React.ReactNode }) {
       </Sidebar>
 
       <main className="m-4 flex-1 overflow-auto">{children}</main>
-      <div className="absolute right-0">
+      <div className="absolute right-0 md:hidden">
         <MobileSidebar>
           <SidebarItem
             icon={<CircleGauge fontSize={20} />}
