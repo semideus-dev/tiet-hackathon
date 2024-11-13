@@ -2,6 +2,15 @@
 
 import Link from "next/link";
 import { MoreVertical, ChevronLast, ChevronFirst } from "lucide-react";
+import {
+  Sheet,
+  SheetContent,
+  SheetDescription,
+  SheetHeader,
+  SheetTitle,
+  SheetTrigger,
+} from "@/components/ui/sheet";
+
 import React, {
   useContext,
   createContext,
@@ -37,7 +46,7 @@ export default function Sidebar({ children }: SidebarProps) {
 
   return (
     <aside className="h-screen">
-      <nav className="flex h-full flex-col border-r bg-white shadow-sm">
+      <nav className="hidden h-full flex-col border-r bg-white shadow-sm md:flex">
         <div className="flex items-center justify-between p-4 pb-2">
           <img
             src="https://img.logoipsum.com/243.svg"
@@ -74,6 +83,24 @@ export default function Sidebar({ children }: SidebarProps) {
         </div>
       </nav>
     </aside>
+  );
+}
+
+export function MobileSidebar({ children }: SidebarProps) {
+  return (
+    <Sheet>
+      <SheetTrigger className="mr-2 mt-4 h-fit rounded-lg bg-muted p-1">
+        <ChevronLast color="black" />
+      </SheetTrigger>
+      <SheetContent>
+        <SheetHeader>
+          <SheetTitle className="font-light uppercase tracking-wide">
+            Navigation
+          </SheetTitle>
+          {children}
+        </SheetHeader>
+      </SheetContent>
+    </Sheet>
   );
 }
 
