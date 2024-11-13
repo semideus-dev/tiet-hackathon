@@ -113,7 +113,7 @@ const data: BookOrder[] = [
   },
 ];
 
-export const columns: ColumnDef<BookOrder>[] = [
+const columns: ColumnDef<BookOrder>[] = [
   {
     id: "select",
     header: ({ table }) => (
