@@ -41,7 +41,11 @@ export default function AppLayout({ children }: { children: React.ReactNode }) {
           text="Weather"
           href="/weather"
         />
-        <SidebarItem icon={<FireExtinguisher fontSize={20} />} text="Fire" />
+        <SidebarItem
+          icon={<FireExtinguisher fontSize={20} />}
+          text="Fire"
+          href="/fire"
+        />
       </Sidebar>
 
       <main className="m-4 flex-1 overflow-auto">{children}</main>

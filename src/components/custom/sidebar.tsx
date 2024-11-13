@@ -1,7 +1,12 @@
 "use client";
 
 import Link from "next/link";
-import { MoreVertical, ChevronLast, ChevronFirst } from "lucide-react";
+import {
+  MoreVertical,
+  ChevronLast,
+  ChevronFirst,
+  AlignJustify,
+} from "lucide-react";
 import {
   Sheet,
   SheetContent,
@@ -57,7 +62,7 @@ export default function Sidebar({ children }: SidebarProps) {
             onClick={() => setExpanded((curr) => !curr)}
             className="rounded-lg bg-gray-50 p-1.5 hover:bg-gray-100"
           >
-            {expanded ? <ChevronFirst /> : <ChevronLast />}
+            <AlignJustify />
           </button>
         </div>
 
@@ -90,7 +95,7 @@ export function MobileSidebar({ children }: SidebarProps) {
   return (
     <Sheet>
       <SheetTrigger className="mr-2 mt-4 h-fit rounded-lg bg-muted p-1">
-        <ChevronLast color="black" />
+        <AlignJustify />
       </SheetTrigger>
       <SheetContent>
         <SheetHeader>

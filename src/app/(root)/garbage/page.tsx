@@ -1,5 +1,6 @@
 import InfoCard from "@/components/custom/cards/info-card";
 import PageHeader from "@/components/custom/dashboard/page-header";
+import GarbageAlerts from "@/components/custom/garbage/garbage-alerts";
 import ReportComponent from "@/components/custom/garbage/report";
 import { Hammer, SprayCan, Trash2 } from "lucide-react";
 
@@ -28,6 +29,7 @@ export default function GarbageModule() {
         />
       </div>
       <ReportComponent />
+      <GarbageAlerts />
     </div>
   );
 }

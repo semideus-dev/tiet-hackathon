@@ -37,8 +37,12 @@ export default {
           foreground: "hsl(var(--accent-foreground))",
         },
         destructive: {
-          DEFAULT: "hsl(var(--destructive))",
-          foreground: "hsl(var(--destructive-foreground))",
+          DEFAULT: "#f43f5e",
+          foreground: "#ffe4e6",
+        },
+        success: {
+          DEFAULT: "#10b981",
+          foreground: "#059669",
         },
         border: "hsl(var(--border))",
         input: "hsl(var(--input))",
